@@ -13,11 +13,7 @@ class pagesController extends Controller
 
     public function test(){
 
-
-
-
-        $string = str_shuffle(mt_rand(10000, 99999) . mt_rand(10000, 99999));
-        echo $string;
+        echo $_SESSION['referrer'];
     }
     public function home(){
 
