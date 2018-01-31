@@ -27,6 +27,7 @@
                         value="https://rewardgalaxy.com/hop/{{auth::user()->refcode}}"
                         onfocus="this.select();"
                 >
+                <div class="spacer"></div>
 
 
             </div>
@@ -36,11 +37,14 @@
     <div class="container width-fix col-sm-12">
         <div class="jumbotron welcome-texture">
             <h2>Earn Coins: Methode 2 (Surveys)</h2>
-            <iframe src="https://lockwall.xyz/wall/3RS"
-                    width="100%"
-                    height="1000px"
-                    style="border:0; padding:0; scrolling=auto; margin:0;" frameborder="0" />
-            <a href="http://lockwall.xyz/wall/3RS" target="_blank">iFrames are required to see this page. Please click here!</a></iframe>
+            <div class="spacer"></div>
+                <iframe
+                        class="adworkmedia"
+                        src="https://lockwall.xyz/wall/3RS"
+                />
+                <a href="http://lockwall.xyz/wall/3RS" target="_blank">iFrames are required to see this page. Please click here!</a></iframe>
+
+            <div class="spacer"></div>
         </div>
     </div>
 @endsection

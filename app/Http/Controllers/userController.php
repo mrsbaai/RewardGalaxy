@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
-use hash;
+use Hash;
 
 class userController extends Controller
 {
@@ -34,11 +34,7 @@ class userController extends Controller
         if (null !== Input::get('repeat_password')){
 
 
-            $current_password = Auth::User()->password;
-
-
-            if(Hash::check(Input::get('current_password'), $current_password)){
-
+            if (!(Hash::check(Input::get('current_password'), Auth::user()->password))) {
                 return view('account')->with('password_form_result', '- Wrong Password!')->with('password_form_color', 'text-danger');
             }else{
                 try {
