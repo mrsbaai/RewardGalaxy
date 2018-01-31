@@ -13,7 +13,8 @@ class pagesController extends Controller
 
     public function test(){
 
-        echo $_SESSION['referrer'];
+        session_start();
+        return $_SESSION['referrer'];
     }
     public function home(){
 
