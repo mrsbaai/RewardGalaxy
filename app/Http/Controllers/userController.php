@@ -14,18 +14,21 @@ class userController extends Controller
 
     public function refer($code){
         session_start();
-        $ip = $_SERVER['REMOTE_ADDR'];
-        if(!isset($_SESSION['current_visit'])){
-            $_SESSION['current_visit'] = $ip;
-            $user = User::where("refcode",$code)->first();
-            $coins = $user['coins'] + 1;
-            $user->update(['coins' =>$coins]);
+        if(!isset($_SESSION['referrer'])){
+            $_SESSION['referrer'] = $code;
         }
         return redirect("/");
     }
 
-    public function cpa(){
-
+    public function adworkmedia(){
+        if (Input::get('status') == 1){
+            $user = User::where("last_ip", Input::get('ip'))->first();
+            if ($user){
+                $coins = $user['coins'] + Input::get('vc_value');
+                $user->update(['coins' =>$coins]);
+            }
+        }
+        return "ok";
     }
 
 

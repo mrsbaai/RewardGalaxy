@@ -14,7 +14,7 @@
     <div class="container width-fix col-sm-12">
         <div class="jumbotron welcome-texture">
             <h2>Earn Coins: Methode 1 (Share)</h2>
-            <p>Refer your friends to this link and earn 1 <i class="fa fa-star currency smaller"></i> for each visitor.</p>
+            <p>Refer your friends to this link and earn 2 <i class="fa fa-star currency smaller"></i> for new user.</p>
             <div class="">
 
                 <input

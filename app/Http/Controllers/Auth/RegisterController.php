@@ -64,6 +64,14 @@ class RegisterController extends Controller
     {
         $refcode = str_shuffle(mt_rand(10000, 99999) . mt_rand(10000, 99999));
         $bonus = 15;
+
+        if(isset($_SESSION['referrer'])){
+            $referrer = $_SESSION['referrer'];
+            $user = User::where("refcode",$referrer)->first();
+            $coins = $user['coins'] + 2;
+            $user->update(['coins' =>$coins]);
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

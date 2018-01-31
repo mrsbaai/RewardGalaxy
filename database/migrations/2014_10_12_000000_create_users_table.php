@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('email')->unique();
             $table->string('name');
+            $table->string('last_ip')->nullable();
             $table->integer('coins')->default("15");
             $table->string('refcode')->unique();
             $table->string('password');

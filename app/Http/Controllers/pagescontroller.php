@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reward;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class pagesController extends Controller
@@ -21,6 +22,7 @@ class pagesController extends Controller
     public function home(){
 
         if (Auth::check()){
+            $this->updateIP();
             return view("coins");
         }
 
@@ -50,7 +52,13 @@ class pagesController extends Controller
             return view("auth.login");
         }
 
+        $this->updateIP();
         return view("coins");
+    }
+
+    private function updateIP(){
+        $ip = $_SERVER['REMOTE_ADDR'];
+        User::where('email', '=', Auth::user()->email)->update(['last_ip' => $ip]);
     }
 
     public function rewards(){

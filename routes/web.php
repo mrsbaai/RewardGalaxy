@@ -17,7 +17,7 @@ Auth::routes();
 
 
 Route::get('/', 'pagesController@home')->name('home');
-Route::get('/callback', 'userController@cpa');
+Route::get('/adworkmedia', 'userController@adworkmedia');
 
 Route::get('/hop/{code}', 'userController@refer');
 

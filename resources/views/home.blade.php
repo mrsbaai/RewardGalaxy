@@ -17,7 +17,7 @@
             <ul>
                 <li>
                     <p>Method 1 (Share):
-                    Share your unique referral link with your friends. You will get 1 Coin for each visitor.<p>
+                    Share your unique referral link with your friends. You will get 2 Coins for each new user.<p>
                 </li>
                 <li>
                     <p>Method 2 (Surveys):
