@@ -17,6 +17,7 @@ Auth::routes();
 
 
 Route::get('/', 'pagesController@home')->name('home');
+Route::get('/home', 'pagesController@home')->name('home');
 Route::get('/adworkmedia', 'userController@adworkmedia');
 
 Route::get('/hop/{code}', 'userController@refer');
