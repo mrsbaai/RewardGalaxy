@@ -16,6 +16,7 @@ class CreateRewardsTable extends Migration
         Schema::create('rewards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->string('tag')->unique();
             $table->longText('short_description');
             $table->string('long_desctiption');
             $table->string('thumbnail')->default("thumb.png");

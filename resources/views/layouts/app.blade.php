@@ -8,14 +8,19 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>«RewardGalaxy»</title>
 
     <!-- Styles -->
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/darkBuzz.css') }}" rel="stylesheet">
+
+
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top nav-texture">
             <div class="container">
                 <div class="navbar-header">
 
@@ -28,26 +33,28 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand logo" href="{{ url('/') }}">
+                         <span> «</span>RewardGalaxy<span>» </span>
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
+                            <li><a href="/tos">TOS</a></li>
+                            <li><a href="/contact">Contact</a></li>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li><a href="/earn">Coins</a></li>
-                            <li><a href="/rewards">Rewards</a></li>
+                            <li  class="dropdown"><a href="/coins">Coins</a></li>
+                            <li  class="dropdown"><a href="/rewards">Rewards</a></li>
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -85,6 +92,10 @@
         </nav>
 
         @yield('content')
+    </div>
+
+    <div class="container width-fix col-sm-12 text-center footer-c no-padding no-margin">
+        RewardGalaxy.com &copy; {{ Carbon\Carbon::now()->format('Y') }} All rights reserved.
     </div>
 
     <!-- Scripts -->
