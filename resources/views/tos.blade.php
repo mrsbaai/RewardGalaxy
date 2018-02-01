@@ -64,7 +64,7 @@
                     <p>B. Referral Coins:</p>
 
                     <ol>
-                        <li>You will receive 1 star from a unique referral who visits your referral link.</li>
+                        <li>You will receive {{config('app.refercoins')}} coins from a unique referral who registers your referral link.</li>
                     </ol>
 
                     <p>C. Referral Integrity:</p>

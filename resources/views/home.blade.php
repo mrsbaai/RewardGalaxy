@@ -17,7 +17,7 @@
             <ul>
                 <li>
                     <p>Method 1 (Share):
-                    Share your unique referral link with your friends. You will get 2 Coins for each new user.<p>
+                    Share your unique referral link with your friends. You will get {{config('app.refercoins')}} Coins for each new user.<p>
                 </li>
                 <li>
                     <p>Method 2 (Surveys):
@@ -40,7 +40,7 @@
 
     <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
         <h2 style="color:white;">
-            Register Now And Get 15 Free Coins!
+            Register Now And Get {{config('app.refercoins')}} Free Coins!
         </h2>
         <br/>
         <a href="/register" type="button" class="btn btn-lg btn-primary">Get A Free Account</a>
