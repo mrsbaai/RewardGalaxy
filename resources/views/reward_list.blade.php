@@ -7,8 +7,9 @@
             <div class="thumbContainer">
                 <div class="thumbnail thumb-texture" >
                     <a href="../win/{{ $reward->tag }}" class="thumb img-responsive" title="Win {{ $reward->title }}" >
+
+                        <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">
                         <span class="locked"></span>
-                        <img src="../img/rewards/{{ $reward->thumbnail }}" >
                     </a>
 
                     <div class="caption">
