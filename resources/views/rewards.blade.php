@@ -2,6 +2,6 @@
 @include('reward_list')
 @section('content')
     <div class="container col-sm-12">
-        @yield('rewards')s
+        @yield('rewards')
     </div>
 @endsection
