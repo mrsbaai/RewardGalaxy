@@ -5,22 +5,10 @@
 
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="thumbContainer">
-                <div class="thumbnail thumb-texture bottom" >
+                <div class="thumbnail thumb-texture" >
                     <a href="../win/{{ $reward->tag }}" class="thumb img-responsive" title="Win {{ $reward->title }}" >
-
+                        <span class="locked"></span>
                         <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">
-                        @if(Auth::check())
-                            @if(auth::user()->coins < $reward->coins)
-                                <span class="locked"></span>
-                            @else
-                                <span class="unlocked"></span>
-                            @endif
-
-                        @else
-                            <span class="locked"></span>
-                        @endif
-
-
                     </a>
 
                     <div class="caption">
