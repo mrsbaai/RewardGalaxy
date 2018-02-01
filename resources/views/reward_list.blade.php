@@ -8,8 +8,19 @@
                 <div class="thumbnail thumb-texture" >
                     <a href="../win/{{ $reward->tag }}" class="thumb img-responsive" title="Win {{ $reward->title }}" >
 
-                        <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">
-                        <span class="locked"></span>
+                        <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-responsive img-thumb">
+                        @if(Auth::check())
+                            @if(auth::user()->coins < $reward->coins)
+                                <span class="locked"></span>
+                            @else
+                                <span class="unlocked"></span>
+                            @endif
+
+                        @else
+                            <span class="locked"></span>
+                        @endif
+
+
                     </a>
 
                     <div class="caption">
