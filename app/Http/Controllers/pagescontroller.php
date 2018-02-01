@@ -36,7 +36,7 @@ class pagesController extends Controller
             return view("coins");
         }
 
-        $rewards = reward::all();
+        $rewards = reward::all()->orderBy('coins');
         return view("home")->with('rewards', $rewards);
     }
 
@@ -76,7 +76,7 @@ class pagesController extends Controller
             return view("auth.login");
         }
 
-        $rewards = reward::all();
+        $rewards = reward::all()->orderBy('coins');
         return view("rewards")->with('rewards', $rewards);
 
     }
