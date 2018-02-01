@@ -20,6 +20,10 @@ Route::get('/', 'pagesController@home')->name('home');
 Route::get('/home', 'pagesController@home')->name('home');
 Route::get('/adworkmedia', 'userController@adworkmedia');
 
+Route::get('/admin', 'pagesController@admin');
+
+Route::post('/admin', 'adminController@addReward');
+
 Route::get('/hop/{code}', 'userController@refer');
 
 Route::get('/contact', 'pagesController@contact')->name('contact');
@@ -28,7 +32,7 @@ Route::post('/contact', 'contactController@send');
 
 Route::get('/tos', 'pagesController@tos')->name('tos');
 
-Route::get('/test', 'pagesController@test');
+Route::get('/test', 'adminController@test');
 
 
 Route::get('/coins', 'pagesController@coins')->name('coins');

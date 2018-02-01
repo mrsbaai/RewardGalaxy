@@ -11,6 +11,19 @@ class pagesController extends Controller
 {
 
 
+    public function admin(){
+
+        if (Auth::check()){
+            if(Auth::user()->is_admin == true){
+                return view("admin");
+            }
+        }
+
+        return redirect('/');
+
+    }
+
+
     public function test(){
 
         session_start();
@@ -69,14 +82,6 @@ class pagesController extends Controller
     }
 
 
-    public function admin(){
-        if (!Auth::check()){
-            return view("auth.login");
-        }
-
-
-        return view("admin");
-    }
 
     public function account(){
         if (!Auth::check()){
