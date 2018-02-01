@@ -15,7 +15,7 @@
                         <h2>{{$reward->title}}</h2>
                         <p><b>Cost:</b> <i class="currency">{{$reward->coins}} Coins</i> </p>
                         @if(!Auth::check())
-                            <p><a href="/register" type="button" class="btn btn-xs btn-danger no-margin">Get Free Coins</a></p>
+                            <p><a href="/register" type="button" class="btn btn-xs btn-primary no-margin">Get Free Coins</a></p>
                         @endif
 
                         <p><b>Description:</b>
