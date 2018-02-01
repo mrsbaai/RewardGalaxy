@@ -18,7 +18,9 @@
                             <p><a href="/register" type="button" class="btn btn-xs btn-danger no-margin">Get Free Coins</a></p>
                         @endif
 
-                        <p><b>Description:</b> <br/> {{$reward->long_description}}</p>
+                        <p><b>Description:</b>
+                            <br/><br/>
+                            {{$reward->long_description}}</p>
 
 
                         @if(Auth::check())
