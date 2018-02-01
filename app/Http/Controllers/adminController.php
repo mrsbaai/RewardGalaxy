@@ -3,22 +3,45 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use App\Reward;
 
 class adminController extends Controller
 {
     public function addReward(){
-        return "test";
+
+        $random = str_shuffle(mt_rand(10000, 99999));
+
+        $title = Input::get('title');
+        $tag = Input::get('tag') . $random;
+        $short_description = Input::get('short_description');
+        $long_desctiption = Input::get('long_description');
+
+        $coins = Input::get('coins');
+
+        $thumbnail = Input::get('thumbnail');
+        $thumbnail =  $this->downloadThumbnail($title, $thumbnail);
+
+        Reward::create([
+            'title' => $title,
+            'tag' => $tag,
+            'short_description' => $short_description,
+            'long_description' => $long_desctiption,
+            'coins' => $coins,
+            'thumbnail' => $thumbnail,
+        ]);
+
     }
 
 
 
     public function test(){
-        return $this->downloadThumbnail("iphone6", "https://ssli.ebayimg.com/images/g/tLUAAOSw0GJZpxi4/s-l640.jpg");
+        return "";
 
     }
 
-    public function downloadThumbnail ($offer_name, $url){
-        $name = $this->sluggable($offer_name) . '.jpg';
+    public function downloadThumbnail ($title, $url){
+        $name = $this->sluggable($title) . '.jpg';
         $path = public_path() . "/img/rewards/". $name;
 
         if (copy($url, $path)){

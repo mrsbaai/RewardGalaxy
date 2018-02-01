@@ -13,12 +13,12 @@
 
                     <section  class="col-lg-9 col-md-8 col-sm-7">
                         <h2>{{$reward->title}}</h2>
-                        <p>Cost: <i class="currency">{{$reward->coins}} Coins</i> </p>
+                        <p><b>Cost:</b> <i class="currency">{{$reward->coins}} Coins</i> </p>
                         @if(!Auth::check())
                             <p><a href="/register" type="button" class="btn btn-xs btn-danger no-margin">Get Free Coins</a></p>
                         @endif
 
-                        <p>Description: {{$reward->long_desctiption}}</p>
+                        <p><b>Description:</b> <br/> {{$reward->long_description}}</p>
 
 
                         @if(Auth::check())

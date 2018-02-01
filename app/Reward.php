@@ -8,6 +8,6 @@ class Reward extends Model
 {
     protected $table = 'rewards';
     protected $fillable = [
-        'title', 'tag', 'short_description','long_desctiption','thumbnail','coins','created_at','updated_at'
+        'title', 'tag', 'short_description','long_description','thumbnail','coins','created_at','updated_at'
     ];
 }
