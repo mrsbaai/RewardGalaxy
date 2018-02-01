@@ -18,7 +18,7 @@
                             <span class="locked"></span>
                         @endif
 
-                            <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">dd
+                            <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">
 
 
                     </a>
