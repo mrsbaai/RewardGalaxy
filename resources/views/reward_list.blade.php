@@ -8,7 +8,7 @@
                 <div class="thumbnail thumb-texture bottom" >
                     <a href="../win/{{ $reward->tag }}" class="thumb img-responsive" title="Win {{ $reward->title }}" >
 
-                            <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">
+
                         @if(Auth::check())
                             @if(auth::user()->coins < $reward->coins)
                                 <span class="locked"></span>
@@ -19,7 +19,7 @@
                         @else
                             <span class="locked"></span>
                         @endif
-
+                            <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-responsive img-thumb">
 
                     </a>
 
