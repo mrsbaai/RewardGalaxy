@@ -13,8 +13,8 @@ class adminController extends Controller
 
 
     public function test(){
-        $this->downloadThumbnail("iphone6", "https://ssli.ebayimg.com/images/g/tLUAAOSw0GJZpxi4/s-l640.jpg");
-        return "ok f takoki";
+        return $this->downloadThumbnail("iphone6", "https://ssli.ebayimg.com/images/g/tLUAAOSw0GJZpxi4/s-l640.jpg");
+
     }
 
     public function downloadThumbnail ($offer_name, $url){
