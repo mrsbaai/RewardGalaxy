@@ -56,7 +56,7 @@
     @if(!Auth::check())
         <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
             <h2 style="color:white;">
-                Register Now And Get {{config('app.signupbonus')}} Free Coins!
+                Register Now And Get {{config('app.signupbonus')}} Coins!
             </h2>
             <br/>
             <a href="/register" type="button" class="btn btn-lg btn-primary">Register A Free Account</a>
