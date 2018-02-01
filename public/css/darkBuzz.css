@@ -330,6 +330,7 @@ a.thumb span{
 .img-thumb{
     position: absolute;
     max-height: 300px;
+    width: auto;
     bottom: 0;
     left: 0;
 }
