@@ -53,6 +53,9 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+                            @if(Auth::user()->is_admin == true)
+                                <li  class="dropdown"><a href="/admin">Administration</a></li>
+                            @endif
                             <li  class="dropdown"><a href="/coins">Coins</a></li>
                             <li  class="dropdown"><a href="/rewards">Rewards</a></li>
 
