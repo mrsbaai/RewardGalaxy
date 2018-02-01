@@ -17,8 +17,8 @@ class CreateRewardsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('tag')->unique();
-            $table->longText('short_description');
-            $table->string('long_description');
+            $table->mediumText('short_description');
+            $table->longText('long_description');
             $table->string('thumbnail')->default("thumb.png");
             $table->integer('coins')->default(100);
             $table->timestamps();
