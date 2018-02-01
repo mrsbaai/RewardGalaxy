@@ -5,7 +5,7 @@
 
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="thumbContainer">
-                <div class="thumbnail thumb-texture" >
+                <div class="thumbnail thumb-texture bottom" >
                     <a href="../win/{{ $reward->tag }}" class="thumb img-responsive" title="Win {{ $reward->title }}" >
                         @if(Auth::check())
                             @if(auth::user()->coins < $reward->coins)
@@ -18,7 +18,8 @@
                             <span class="locked"></span>
                         @endif
 
-                        <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-responsive">
+                            <img src="../img/rewards/{{ $reward->thumbnail }}" class="img-thumb">
+                   
 
                     </a>
 

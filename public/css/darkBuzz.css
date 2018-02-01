@@ -322,8 +322,13 @@ a.thumb span{
 
     width: 100%;
 
-}
 
+}
+.img-thumb{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 .short-description{
     overflow: hidden;
