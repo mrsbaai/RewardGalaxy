@@ -2,10 +2,7 @@
 /*# sourceMappingURL=app.css.map */
 
 
-@font-face {
-    font-family: TitilliumText22LRegular;
-    src: url(../fonts/TitilliumText22L003-webfont.woff);
-}
+
 
 body {
     background: #677 url(../img/texture.png) repeat;
