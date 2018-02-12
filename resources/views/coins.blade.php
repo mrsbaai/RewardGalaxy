@@ -27,14 +27,10 @@
                         value="https://rewardgalaxy.com/hop/{{auth::user()->refcode}}"
                         onfocus="this.select();"
                 >
-                <div class="spacer"></div>
 
 
-            </div>
+                <div class="text-center"><h2 class="text-center">OR</h2></p>
 
-            <p class="text-center"><h2>OR</h2></p>
-
-            <div>
 
                 <input
 
@@ -47,7 +43,7 @@
                         onfocus="this.select();"
                 >
                 <div class="spacer"></div>
-                
+
             </div>
 
         </div>
