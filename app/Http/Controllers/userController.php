@@ -20,6 +20,14 @@ class userController extends Controller
         return redirect("/");
     }
 
+    public function referRegister($code){
+        session_start();
+        if(!isset($_SESSION['referrer'])){
+            $_SESSION['referrer'] = $code;
+        }
+        return redirect("/register");
+    }
+
     public function adworkmedia(){
         if (Input::get('status') == 1){
             $user = User::where("last_ip", Input::get('ip'))->first();

@@ -15,7 +15,7 @@
         <div class="jumbotron welcome-texture">
             <h2>Earn Coins: Methode 1 (Share)</h2>
             <p>Refer your friends to this link and earn {{config('app.refercoins')}} <i class="fa fa-star currency smaller"></i> for new user.</p>
-            <div class="">
+            <div>
 
                 <input
 
@@ -31,6 +31,25 @@
 
 
             </div>
+
+            <p class="text-center"><h2>OR</h2></p>
+
+            <div>
+
+                <input
+
+                        type="text"
+                        class="input-lg referinput"
+                        data-toggle="tooltip"
+                        readonly="readonly"
+                        title="Copy & Paste"
+                        value="https://rewardgalaxy.com/register/{{auth::user()->refcode}}"
+                        onfocus="this.select();"
+                >
+                <div class="spacer"></div>
+                
+            </div>
+
         </div>
     </div>
 

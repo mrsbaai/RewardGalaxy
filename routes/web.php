@@ -15,6 +15,8 @@
 
 Auth::routes();
 
+Route::get('/register/{hop}', 'userController@referRegister');
+
 
 Route::get('/', 'pagesController@home')->name('home');
 Route::get('/home', 'pagesController@home')->name('home');
