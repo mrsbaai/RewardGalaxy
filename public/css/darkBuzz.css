@@ -116,6 +116,10 @@ label {
     border:none;
 }
 
+.very-large-text{
+    font-size: 200%;
+}
+
 .referinput{
     color: white;
     background-color: #282C2E;
