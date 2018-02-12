@@ -63,14 +63,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $refcode = str_shuffle(mt_rand(10000, 99999) . mt_rand(10000, 99999));
-        $bonus = config('app.signupbonus');
 
         session_start();
         if(isset($_SESSION['referrer'])){
+            $bonus = config('app.referedsignupbonus');
             $referrer = $_SESSION['referrer'];
             $user = User::where("refcode",$referrer)->first();
             $coins = $user['coins'] + config('app.refercoins');
             $user->update(['coins' =>$coins]);
+        }else{
+            $bonus = config('app.signupbonus');
         }
 
         return User::create([

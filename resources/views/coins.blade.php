@@ -15,6 +15,8 @@
         <div class="jumbotron welcome-texture">
             <h2>Earn Coins: Methode 1 (Share)</h2>
             <p>Refer People to your link, and earn {{config('app.refercoins')}} <i class="fa fa-star currency smaller"></i> for new user.</p>
+            <p>Your referrals will get {{config('app.referedsignupbonus')}} for signing up from your link.</p>
+
             <div>
 
                 <input

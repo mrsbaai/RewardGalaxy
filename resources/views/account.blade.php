@@ -110,7 +110,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="current_password">Current Password:</label>
+                                <label for="current_password">* Current Password:</label>
                                 <input id="current_password" type="password" name="current_password" class="form-control" placeholder="Your Current Password" required="required">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -118,7 +118,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="new_password">New Password:</label>
+                                <label for="new_password">* New Password:</label>
                                 <input id="new_password" type="password" name="new_password" class="form-control" placeholder="Your New Password" required="required">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -126,7 +126,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="repeat_password">Confirm Password:</label>
+                                <label for="repeat_password">* Confirm Password:</label>
                                 <input id="repeat_password" type="password" name="repeat_password" class="form-control" placeholder="Type Your New Password again" required="required">
                                 <div class="help-block with-errors"></div>
                             </div>
