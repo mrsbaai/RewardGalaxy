@@ -5,8 +5,7 @@
     <div class="container width-fix col-sm-12">
         <div class="jumbotron welcome-texture">
             <div class="text-center">
-                <p><h5 class="panel-title very-large-text">You currently have: <span class="currency">{{Auth::user()->coins}} Coins</span></h5></p>
-
+                <span class="panel-title very-large-text">You currently have: <span class="currency">{{Auth::user()->coins}} Coins</span></span>
             </div>
         </div>
     </div>
