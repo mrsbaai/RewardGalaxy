@@ -31,7 +31,7 @@
                 >
 
 
-                <div class="text-center"><h2 class="text-center">OR</h2></p>
+                <div class="text-center"><p><h2 class="text-center">OR</h2></p></div>
 
 
                 <input
