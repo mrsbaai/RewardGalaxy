@@ -15,6 +15,15 @@
 
 Auth::routes();
 
+Route::get('/in', function () {
+    return redirect('http://zickwick.com/?E=%2fIZLE9Q3ZMcVrSimXMai%2fOySr70A6u8b&s1=');
+});
+
+Route::get('/out', function () {
+    return redirect('http://resourcedepot.info/unsubscribe.php');
+});
+
+
 Route::get('/register/{hop}', 'userController@referRegister');
 
 
