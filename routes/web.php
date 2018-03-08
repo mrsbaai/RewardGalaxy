@@ -16,11 +16,11 @@
 Auth::routes();
 
 Route::get('/in', function () {
-    return redirect('http://zickwick.com/?E=%2fIZLE9Q3ZMcVrSimXMai%2fOySr70A6u8b&s1=');
+    return redirect('http://zickwick.com/?E=kXE%2ffwM2OuXJqVoqlV58NAvZOkeavcEx&s1=');
 });
 
 Route::get('/out', function () {
-    return redirect('http://resourcedepot.info/unsubscribe.php');
+    return redirect('http://www.optout-nvsg.net/o-nvsg-c01-cb1de27eb0ef1306a314b077b9b56afd');
 });
 
 
