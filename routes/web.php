@@ -15,6 +15,16 @@
 
 Auth::routes();
 
+Route::get('/ggin', function () {
+    return redirect('http://zickwick.com/?E=%2fIZLE9Q3ZMcVrSimXMai%2fOySr70A6u8b&s1=');
+});
+
+
+Route::get('/ggout', function () {
+    return redirect('http://resourcedepot.info/unsubscribe.php');
+});
+
+
 Route::get('/in', function () {
     return redirect('http://zickwick.com/?E=kXE%2ffwM2OuXJqVoqlV58NAvZOkeavcEx&s1=');
 });
