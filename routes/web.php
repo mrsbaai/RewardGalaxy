@@ -15,6 +15,15 @@
 
 Auth::routes();
 
+Route::get('/fr1in', function () {
+    return redirect('http://strongsaws.com/1995bb5eb37b8de800/');
+});
+
+Route::get('/fr2out', function () {
+    return redirect('http://strongsaws.com/u1995bb5eb37b8de800/');
+});
+
+
 Route::get('/ggin', function () {
     return redirect('http://zickwick.com/?E=%2fIZLE9Q3ZMcVrSimXMai%2fOySr70A6u8b&s1=');
 });
