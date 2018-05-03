@@ -6,7 +6,7 @@
 
 
 <head>
-    <title>RewardGalaxy :: Welcome</title>
+    <title>Win Rewards Online</title>
 </head>
 @section('content')
     <div class="container width-fix col-sm-12">
