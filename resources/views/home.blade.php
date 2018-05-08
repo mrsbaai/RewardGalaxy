@@ -12,7 +12,7 @@
     <div class="container width-fix col-sm-12">
         <div class="jumbotron welcome-texture">
             <h2>Welcome To Reward Galaxy!</h2>
-            <p>On this web site you will find some rewards. To get any of the rewards, you need coins.</p>
+            <p>On this web site you will find some rewards. To win rewards, you need coins.</p>
             <h2>How to earn Coins?</h2>
             <ul>
                 <li>
