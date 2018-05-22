@@ -12,15 +12,15 @@
     <div class="container width-fix col-sm-12">
         <div class="jumbotron welcome-texture">
             <h2>It's Simple on Reward Galaxy:</h2>
-            <p><b>The products here cost <u>Coins</u> insted of <strike>Money</strike></b></p>
-            <h2>How to earn Coins?</h2>
+            <p><b>The products here cost <u>Coins</u> instead of <strike>Money</strike></b></p>
+            <h2>How to earn <u>Coins</u>?</h2>
             <ul>
                 <li>
-                    <p>Method 1 (Share):
+                    <p>Method 1 <u><b>(Share)</b></u>:
                     Share your unique referral link with your friends. You will get {{config('app.refercoins')}} Coins for each new user.<p>
                 </li>
                 <li>
-                    <p>Method 2 (Surveys):
+                    <p>Method 2 <u><b>(Surveys)</b></u>:
                     Complete surveys from our sponsors. You will earn Coins depending on the difficulty of the survey.</p>
                 </li>
             </ul>
@@ -31,8 +31,8 @@
         </div>
     </div>
     <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-        <br/> <br/> <br/>
-        <a href="/register" type="button" class="btn btn-lg btn-warning">Get Instant Free Coins</a>
+        <br/> <br/>
+        <a href="/register" type="button" class="btn btn-lg btn-success">Register (Instant Free Coins)</a>
         <br/> <br/> <br/>
     </div>
 
