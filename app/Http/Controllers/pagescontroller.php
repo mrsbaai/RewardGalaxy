@@ -30,6 +30,7 @@ class pagesController extends Controller
         return $_SESSION['referrer'];
     }
     public function home(){
+		return "test";
         if (Auth::check()){
             $this->updateIP();
             return view("coins");
