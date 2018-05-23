@@ -30,7 +30,6 @@ class pagesController extends Controller
         return $_SESSION['referrer'];
     }
     public function home(){
-		App::forgetMiddleware('Illuminate\Http\FrameGuard');
         if (Auth::check()){
             $this->updateIP();
             return view("coins");
