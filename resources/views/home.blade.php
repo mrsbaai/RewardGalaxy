@@ -9,7 +9,12 @@
     <title>Win Rewards Online</title>
 </head>
 @section('content')
-    <div class="container width-fix col-sm-12">
+
+    <div class="container col-sm-12">
+        @yield('rewards')
+    </div>
+
+	    <div class="container width-fix col-sm-12">
         <div class="jumbotron welcome-texture">
             <h2>It's Simple on Reward Galaxy:</h2>
             <p><b>The products here cost <u>Coins</u> instead of <strike>Money</strike></b></p>
@@ -30,20 +35,10 @@
 
         </div>
     </div>
-    <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-        <br/> <br/>
-        <a href="/register" type="button" class="btn btn-lg btn-success">Register (Instant Free Coins)</a>
-        <br/> <br/> <br/>
-    </div>
-
-    <div class="container col-sm-12">
-        @yield('rewards')
-    </div>
-
 
     <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
         <h2 style="color:white;">
-            Register Now And Get Instant Free Coins!
+            Register Now And Get <b><u>Instant Free Coins</u></b>!
         </h2>
         <br/>
         <a href="/register" type="button" class="btn btn-lg btn-primary">Register Now</a>
