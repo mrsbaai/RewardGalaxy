@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Hash;
 
+use App\Mail\accountCreated;
+
 class userController extends Controller
 {
 
