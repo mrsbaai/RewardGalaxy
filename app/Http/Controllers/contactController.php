@@ -33,8 +33,7 @@ class contactController extends Controller
         $message->subject($subject);
         $message->to($to);
         });
-
-        Mail::to($email)->send(new contactReceived());
+;
 
 
         return view('contact')->with('result', '- Sent!');
