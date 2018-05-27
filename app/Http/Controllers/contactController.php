@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use app\mail\contactReceived;
 
-
+use Mail;
 class contactController extends Controller
 {
     public function send()

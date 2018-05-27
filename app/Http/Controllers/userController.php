@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Hash;
 
 use App\Mail\accountCreated;
-
+use Mail;
 class userController extends Controller
 {
 
