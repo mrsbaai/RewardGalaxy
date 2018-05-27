@@ -81,7 +81,7 @@ class RegisterController extends Controller
        if (!$data['password']){$data['password'] = substr(str_shuffle(str_repeat($x='0123456789zABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(7/strlen($x)) )),1,7);}
 
 
-        return User::create([
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -90,5 +90,7 @@ class RegisterController extends Controller
         ]);
 
         Mail::to($data['email'])->send(new accountCreated($data));
+
+        return;
     }
 }
