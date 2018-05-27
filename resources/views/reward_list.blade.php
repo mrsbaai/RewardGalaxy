@@ -36,6 +36,7 @@
                       </div>
 
                         <div class="short-description">
+                            <br/>
                             <a href="../win/{{ $reward->tag }}" title="Click for more info about this item...">
                                 <p>{{ $reward->short_description }}</p>
                             </a>
