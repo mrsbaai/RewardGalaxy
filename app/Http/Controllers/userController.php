@@ -77,10 +77,10 @@ class userController extends Controller
                 'coins' => $bonus,
             ]);
 
-            Auth::attempt($data);
-
 
             Mail::to($email)->send(new accountCreated($data));
+            Auth::attempt($data);
+
 
 
         }
