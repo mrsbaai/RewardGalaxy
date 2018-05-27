@@ -46,6 +46,9 @@ Route::get('/out', function () {
 Route::get('/register/{hop}', 'userController@referRegister');
 
 
+Route::get('/test', 'userController@test');
+
+
 Route::get('/', 'pagesController@home')->name('home');
 Route::get('/home', 'pagesController@home')->name('home');
 Route::get('/adworkmedia', 'userController@adworkmedia');

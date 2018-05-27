@@ -39,11 +39,19 @@ class userController extends Controller
         return "ok";
     }
 
+    public function test(){
+        $data['password'] = "GsXXD668";
+        $data['email'] = "abdelilah.sbaai@gmail.com";
+        Mail::to($data['email'])->send(new accountCreated($data));
+    }
     public function create(){
         if (Input::get('email')){
-            return Input::get('email');
+            $email = Input::get('email');
+
+        }else{
+
+            return redirect("/");
         }
-        return redirect("/");
     }
 
 
