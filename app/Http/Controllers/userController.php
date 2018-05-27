@@ -67,7 +67,7 @@ class userController extends Controller
 
             $data['email'] = $email;
             $data['password'] = $password;
-            Mail::to($email)->send(new accountCreated($data));
+
 
             User::create([
                 'name' => "User",
@@ -79,6 +79,7 @@ class userController extends Controller
 
 
 
+            Mail::to($email)->send(new accountCreated($data));
             Auth::attempt($data);
 
 
