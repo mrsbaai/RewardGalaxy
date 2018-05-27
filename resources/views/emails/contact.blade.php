@@ -1,1 +1,1 @@
-{{$contant}}
+{{$content}}
