@@ -27,7 +27,7 @@ class contactController extends Controller
 
 
         $subject = "RewardGalaxy :: " . $subject;
-        $to = 'support@receive-sms.com';
+        $to = 'replaygate@gmail.com';
         Mail::send('emails.contact', ['content' => $content], function ($message) use($subject,$email,$name, $to){
         $message->from($email, $name);
         $message->subject($subject);

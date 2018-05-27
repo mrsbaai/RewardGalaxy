@@ -587,3 +587,15 @@ h4{
 .messages-table {
     font-size: 12px;
 }
+
+.blink{
+
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 1;}
+    75%{opacity: 1;}
+    76%{ opacity: 0;}
+    100%{opacity: 0;}
+}

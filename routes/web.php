@@ -54,6 +54,8 @@ Route::get('/admin', 'pagesController@admin');
 
 Route::post('/admin', 'adminController@addReward');
 
+Route::post('/', 'userController@create');
+
 Route::get('/hop/{code}', 'userController@refer');
 
 Route::get('/contact', 'pagesController@contact')->name('contact');

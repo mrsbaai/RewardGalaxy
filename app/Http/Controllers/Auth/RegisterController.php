@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mail\accountCreated;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -75,6 +76,10 @@ class RegisterController extends Controller
             $bonus = config('app.signupbonus');
         }
 
+       if (!$data['name']){$data['name'] = "User";}
+       if (!$data['password']){$data['password'] = substr(str_shuffle(str_repeat($x='0123456789zABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(7/strlen($x)) )),1,7);}
+
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -82,5 +87,7 @@ class RegisterController extends Controller
             'refcode' => $refcode,
             'coins' => $bonus,
         ]);
+
+        Mail::to($data['email'])->send(new accountCreated($data));
     }
 }

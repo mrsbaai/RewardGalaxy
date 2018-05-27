@@ -32,8 +32,8 @@
 
                         </div>
                         <div>
-                            <p>Cost: <i class="fa fa-star currency">{{ $reward->coins }} Coins</i></p>
-                        </div>
+                            <p class="lead text-justify">Cost: <i class="fa fa-star currency">{{ $reward->coins }} Coins</i></p>
+                      </div>
 
                         <div class="short-description">
                             <a href="../win/{{ $reward->tag }}" title="Click for more info about this item...">

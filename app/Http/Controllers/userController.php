@@ -39,6 +39,13 @@ class userController extends Controller
         return "ok";
     }
 
+    public function create(){
+        if (Input::get('email')){
+            return Input::get('email');
+        }
+        return redirect("/");
+    }
+
 
     public function updateInfo(){
 
