@@ -2,7 +2,7 @@
 
 return [
 
-    'signupbonus' => '50',
+    'signupbonus' => '150',
     'referedsignupbonus' => '150',
     'refercoins' => '5',
     /*
@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', '<<RewardGalaxy>>'),
+    'name' => env('APP_NAME', 'RewardGalaxy'),
 
     /*
     |--------------------------------------------------------------------------

@@ -25,7 +25,7 @@
                                         class="form-control input-lg"
                                         data-toggle="tooltip"
                                         name="email"
-                                        placeholder="E-MAIL Here"
+                                        placeholder="Enter Your E-MAIL Here"
                                         title="Enter your email address here to get started"
                                         onfocus="this.select();"
                                         onmouseup="return false;"
