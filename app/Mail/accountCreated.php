@@ -22,8 +22,8 @@ class accountCreated extends Mailable
 
     public function __construct($data)
     {
-        $this->name = $data['email'];
-        $this->name = $data['password'];
+        $this->email = $data['email'];
+        $this->password = $data['password'];
     }
 
     /**
@@ -34,7 +34,7 @@ class accountCreated extends Mailable
     public function build()
     {
         return $this->markdown('emails.accountCreated')
-            ->subject("RewardGalaxy [Login Info]")
+            ->subject("Your RewardGalaxy Login Info")
             ->with([
                 'email' => $this->email,
                 'password' => $this->password
