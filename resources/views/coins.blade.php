@@ -32,19 +32,7 @@
                 >
 
 
-                <div class="text-center"><p><h2 class="text-center">OR</h2></p></div>
 
-
-                <input
-
-                        type="text"
-                        class="input-lg referinput"
-                        data-toggle="tooltip"
-                        readonly="readonly"
-                        title="Copy & Paste"
-                        value="https://rewardgalaxy.com/register/{{auth::user()->refcode}}"
-                        onfocus="this.select();"
-                >
                 <div class="spacer"></div>
 
             </div>
