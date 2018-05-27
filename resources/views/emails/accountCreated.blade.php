@@ -1,22 +1,21 @@
 @component('mail::message')
+Hello,
 
-    Hello,
+Welcome to RewardGalaxy! Login to your account to track your coins, and request rewards.
 
-    Welcome to RewardGalaxy! Login to your account to track your coins, and request rewards.
+Here is your login info:
 
-    Here is your login info:
-
-    Email: {{$email}}
-    Password: {{$password}}
+Email: {{$email}}
+Password: {{$password}}
 
 
-    @component('mail::button', ['url' => 'https://rewardgalaxy.com/login'])
+@component('mail::button', ['url' => 'https://rewardgalaxy.com/login'])
         Login Here
-    @endcomponent
+@endcomponent
 
-    You have any questions? <a href="http://rewardgalaxy.com/contact">We're here to help</a>.
+You have any questions? <a href="http://rewardgalaxy.com/contact">We're here to help</a>.
 
-    Have Fun!<br>
-    RewardGalaxy Team
+Have Fun!<br>
+RewardGalaxy Team
 
 @endcomponent

@@ -50,10 +50,41 @@ class userController extends Controller
         if (Input::get('email')){
             $email = Input::get('email');
 
-        }else{
+            $refcode = str_shuffle(mt_rand(10000, 99999) . mt_rand(10000, 99999));
 
-            return redirect("/");
+            session_start();
+            if(isset($_SESSION['referrer'])){
+                $bonus = config('app.referedsignupbonus');
+                $referrer = $_SESSION['referrer'];
+                $user = User::where("refcode",$referrer)->first();
+                $coins = $user['coins'] + config('app.refercoins');
+                $user->update(['coins' =>$coins]);
+            }else{
+                $bonus = config('app.signupbonus');
+            }
+
+            $password = substr(str_shuffle(str_repeat($x='0123456789zABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(7/strlen($x)) )),1,7);
+
+            $data['email'] = $email;
+            $data['password'] = $password;
+
+
+            User::create([
+                'name' => "User",
+                'email' => $email,
+                'password' => bcrypt($password),
+                'refcode' => $refcode,
+                'coins' => $bonus,
+            ]);
+
+            Auth::attempt($data);
+
+
+            Mail::to($email)->send(new accountCreated($data));
+
+
         }
+        return redirect("/");
     }
 
 
