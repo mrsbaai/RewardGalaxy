@@ -6,6 +6,7 @@ Welcome to RewardGalaxy! Login to your account to track your coins, and request 
 Here is your login info:
 
 Email: {{$email}}
+
 Password: {{$password}}
 
 
