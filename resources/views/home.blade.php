@@ -22,6 +22,7 @@
                             <div class="input-group text-center">
                                 <input
                                         type="email"
+										id="email"
                                         class="form-control input-lg"
                                         data-toggle="tooltip"
                                         name="email"
@@ -33,10 +34,12 @@
 
                                 >
 
+							
                                 <span class="input-group-btn">
-                                     <a href="javascript:{}" onclick="document.getElementById('register-form').submit();" class="btn btn-primary btn-lg">
-                                         <span class="blink">Get Bonus Coins</span></a>
-                        </span>
+                                      <button type="submit" class="btn btn-lg btn-primary">Get Free Coins</button>
+									 
+									  
+								</span>
 
                             </div>
                         </div>
@@ -84,6 +87,11 @@
         </div>
     </div>
 
+<script>
+$(document).ready(function() {
+    $('#register-form').formValidation();
+});
+</script>
 
 <script src="../js/register.validator.js"></script>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
